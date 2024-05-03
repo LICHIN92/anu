@@ -48,7 +48,7 @@ const doSignup = async (req, res) => {
         res.send(req.body);
     } catch (error) {
         console.log(error);
-        res.status(500).send(error);
+        res.status(500).json(error);
     }
 };
 
