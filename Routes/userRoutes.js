@@ -1,8 +1,8 @@
-const express=require('express')
-const { doSignup, doLogin } = require('../Controller/userController')
-const userRouter=express.Router()
+import express from "express";
+import {signin, signup} from '../Controller/userController.js'
+const userRouter = express.Router();
 
-userRouter.post('/',doSignup)
-userRouter.post('/',doLogin)
+userRouter.post("/signup",signup);
+userRouter.post("/signin", signin);
 
-module.exports=userRouter
+export default userRouter;
